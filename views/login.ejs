@@ -1,0 +1,27 @@
+<!-- app/views/login.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <% if (error_msg) { %>
+      <p class="error-msg"><%= error_msg %></p>
+    <% } %>
+    <form method="POST" action="/users/login" class="form">
+      <label>Email:</label>
+      <input type="email" name="email" required>
+      <br>
+      <label>Password:</label>
+      <input type="password" name="password" required>
+      <br>
+      <input type="submit" value="Login" class="btn">
+    </form>
+    <a href="/users/reset" class="link">Reset Password</a>
+    <a href="/users/google" class="btn btn-google">Sign In with Google</a>
+  </div>
+</body>
+</html>

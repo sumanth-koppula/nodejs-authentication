@@ -1,0 +1,32 @@
+<!-- app/views/register.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Register</h1>
+    <% if (error_msg) { %>
+      <p class="error-msg"><%= error_msg %></p>
+    <% } %>
+    <form method="POST" action="/users/register" class="form">
+      <label>Name:</label>
+      <input type="text" name="name" required>
+      <br>
+      <label>Email:</label>
+      <input type="email" name="email" required>
+      <br>
+      <label>Password:</label>
+      <input type="password" name="password" required>
+      <br>
+      <label>Confirm Password:</label>
+      <input type="password" name="confirmPassword" required>
+      <br>
+      <input type="submit" value="Register" class="btn">
+    </form>
+    <a href="/users/google" class="btn btn-google">Sign Up with Google</a>
+  </div>
+</body>
+</html>

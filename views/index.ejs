@@ -1,0 +1,21 @@
+<!-- app/views/index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <% if (user) { %>
+      <h1>Welcome, <%= user.name %>!</h1>
+      <a href="/users/logout" class="btn">Sign Out</a>
+    <% } else { %>
+      <h1>Welcome to the Home Page</h1>
+      <a href="/users/login" class="btn">Sign In</a>
+      <a href="/users/register" class="btn">Sign Up</a>
+      <a href="/users/google" class="btn btn-google">Sign In with Google</a>
+    <% } %>
+  </div>
+</body>
+</html>

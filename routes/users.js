@@ -25,6 +25,7 @@ router.get('/logout', authController.logout);
 
 // Reset password
 router.post('/reset', authController.resetPassword);
+router.get('/reset', authController.resetPassword);
 
 // Google login/signup (Social authentication)
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
